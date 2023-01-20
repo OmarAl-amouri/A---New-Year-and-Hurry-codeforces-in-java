@@ -1,0 +1,22 @@
+import java.util.Scanner;
+ 
+ 
+public class Phu_Student {
+ 
+      public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt(); // number of problems
+    int k = sc.nextInt(); // time it takes to get to the party
+    int timeSpent = 0; // total time spent solving problems
+    int problemsSolved = 0; // number of problems solved
+    for (int i = 1; i <= n; i++) {
+      int timeToSolve = 5 * i; // time it takes to solve the current problem
+      timeSpent += timeToSolve; // add time to solve current problem to total time spent
+      if (timeSpent + k > 240) { // if time spent plus time to get to party is greater than 4 hours
+        break; // break out of loop
+      }
+      problemsSolved++; // increment number of problems solved
+    }
+    System.out.println(problemsSolved); // print number of problems solved
+  }
+}
